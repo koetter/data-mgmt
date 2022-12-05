@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling", "python-dotenv"]
+build-backend = "hatchling.build"
+
+[project]
+name = "data-mgmt"
+version = "0.0.1"
+authors = [
+  { name="Allan Køtter", email="allan.koetter@live.com" },
+]
+description = "A python package for managing data centric projects"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/koetter/data-mgmt"
+"Bug Tracker" = "https://github.com/koetter/data-mgmt/issues"
