@@ -1,7 +1,4 @@
-<<<<<<< Updated upstream
 
-from . import *
-=======
 import sys
 from . import main, setup
 
@@ -12,4 +9,3 @@ try:
 except Exception as e:
     print('Error: %s' % e, file=sys.stderr)
 sys.exit(rc)
->>>>>>> Stashed changes

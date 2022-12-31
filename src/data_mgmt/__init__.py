@@ -1,15 +1,4 @@
-<<<<<<< Updated upstream
-
-from dotenv import load_dotenv
-
-__all__ = [
-        'mgmt',
-        'secrets'
-        ]
-from mgmt import *
-
-print("__init__.py was executed")
-=======
+import sys
 
 __all__ = [
         'mgmt',
@@ -23,7 +12,7 @@ def main(args=None):
     elif not hasattr(sys, 'base_prefix'):
         compatible = False
     if not compatible:
-        raise ValueError('This script is only for use with Python >= 3.7')
+        raise ValueError('This script is only for use with Python >= 3.8')
     else:
         import argparse
         parser = argparse.ArgumentParser(
@@ -45,4 +34,3 @@ def setup():
     pass
     
 
->>>>>>> Stashed changes

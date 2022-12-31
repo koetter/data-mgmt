@@ -1,13 +1,4 @@
-<<<<<<< Updated upstream
 
-from dotenv import load_dotenv
-
-class Config:
-    
-    def __init__(self, env):
-        self.env = env
-        print("Environment:", self.env)
-=======
 import os
 import json
 from dotenv import dotenv_values
@@ -41,4 +32,3 @@ class Config:
     def write_secrets(self):
         with open(self._secret_file_path, "w") as f:
             content = f.write(json.dumps(self.secrets))
->>>>>>> Stashed changes
