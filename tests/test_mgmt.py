@@ -8,7 +8,7 @@ def test_assert_true():
     assert True
 
 def test_Config_init():
-    con = mgmt.Config("dev")
+    con = mgmt.Config()
     # print(dir(cf))
-    assert con.env == "dev"
+    assert con.PROJKEY == "Uu9-beHvHjbQruTWrs8Pe5jb3FMisrv2XxCaW0U3Ro0="
 
