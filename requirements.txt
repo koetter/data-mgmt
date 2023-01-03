@@ -4,6 +4,7 @@ cryptography==38.0.4
 fernet==1.0.1
 greenlet==2.0.1
 iniconfig==1.1.1
+Markdown==3.4.1
 packaging==22.0
 pluggy==1.0.0
 pyaes==1.6.1

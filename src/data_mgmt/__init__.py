@@ -1,8 +1,10 @@
 import sys
+import logging
+import smtplib
 
 __all__ = [
-        'mgmt',
-        'secrets'
+        'config',
+        'com'
         ]
 
 def main(args=None):
@@ -29,6 +31,7 @@ def main(args=None):
                 )
 
     print("main() was executed")
+
 
 def setup():
     pass
