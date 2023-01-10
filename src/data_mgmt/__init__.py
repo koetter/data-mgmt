@@ -1,11 +1,12 @@
 import sys
-import logging
-import smtplib
+from . import configuration
 
 __all__ = [
-        'config',
-        'com'
+        'configuration',
+        'communication'
         ]
+
+configuration.init()
 
 def main(args=None):
     compatible = True

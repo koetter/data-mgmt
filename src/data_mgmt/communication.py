@@ -4,13 +4,14 @@ from email.mime.base import MIMEBase
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from markdown import markdown
+import pymsteams
 import logging
-from . import configuration
+from . import configuration as conf
 
 
 def send_mail(receivers, subject, markdown_text ):
-    if "smtp" in configuration.secrets["CONN"]:
-        smtp_conf = configuration.secrets["CONN"]["smtp"]
+    if "smtp" in conf.secrets["conn"]:
+        smtp_conf = conf.secrets["conn"]["smtp"]
         print(smtp_conf)
         html_text = markdown(markdown_text)
         message = MIMEMultipart()
@@ -32,4 +33,18 @@ def send_mail(receivers, subject, markdown_text ):
             print("Couldn't initiate SMTP service!")
 
     else:
-        logging.critical("SMTP service is not defined in configuration!")
+        logging.critical("SMTP service is not configured!")
+
+def send_sms(receivers, test):
+    pass
+
+def send_teams_message(text_message, channel):
+    if channel in conf.secrets["comm"]:
+        webhook = conf.secrets["comm"][channel]
+    else:
+        print(f"Webhook for {channel} is not configured")
+        exit
+
+    myTeamsMessage = pymsteams.connectorcard(webhook)
+    myTeamsMessage.text(text_message)
+    myTeamsMessage.send()
