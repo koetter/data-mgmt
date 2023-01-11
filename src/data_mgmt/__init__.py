@@ -1,9 +1,10 @@
 import sys
-from . import configuration
+from . import configuration, communication, datasources
 
 __all__ = [
         'configuration',
         'communication'
+        'datasources'
         ]
 
 configuration.init()
